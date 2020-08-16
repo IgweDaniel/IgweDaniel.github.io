@@ -211,6 +211,11 @@ section.about-me .content {
   max-width: 400px;
   margin: 50px 10%;
 }
+section.about-me .content .cta {
+  /* margin: 0 auto;
+  display: block;
+  width: fit-content; */
+}
 
 section.about-me .content h2 {
   font-size: 32px;
@@ -254,6 +259,7 @@ section.about-me .content p {
     height: 90%;
   }
   .image-wrapper {
+    transform: translateX(80px);
     height: 80%;
     max-height: 560px;
     width: 50%;
@@ -434,7 +440,7 @@ section.contact .contact-form form {
   background: #fff;
   box-shadow: rgba(99, 99, 99, 0.1) 0px 5px 100px 0px;
   background-color: rgb(255, 255, 255);
-  padding: 3rem;
+  padding: 2rem;
 }
 section.contact .contact-form input[type="text"],
 textarea,
@@ -468,6 +474,9 @@ section.contact .contact-form input[type="submit"] {
 }
 
 @media (min-width: 768px) {
+  section.contact .contact-form form {
+    padding: 3rem;
+  }
   section.contact .contact-form {
     margin: 0;
   }
