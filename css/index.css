@@ -65,6 +65,11 @@ body {
   width: 80%;
   margin: auto;
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+}
 nav {
   border-bottom: 1px solid #eee;
   padding: 15px;
@@ -178,6 +183,7 @@ section.greeting .social-links .add-button {
 /* about-me */
 section.about-me {
   height: 100vh;
+  margin-bottom: 30px;
   position: relative;
   display: flex;
   align-items: center;
@@ -195,10 +201,11 @@ section.about-me::after {
   right: 0;
 
   width: 95%;
-  height: 100%;
+  height: 450px;
   opacity: 0.1;
-  top: -10%;
+  top: -5%;
 }
+
 section.about-me .content {
   width: 80%;
   max-width: 400px;
@@ -222,7 +229,7 @@ section.about-me .content p {
 }
 
 .image-wrapper {
-  height: 300px;
+  height: 350px;
   width: 80%;
   max-width: 500px;
 }
@@ -235,14 +242,19 @@ section.about-me .content p {
 }
 
 @media (min-width: 768px) {
+  section.about-me {
+    margin-bottom: 0;
+    max-height: 600px;
+  }
   section.about-me::after {
+    /* top: -10%; */
     left: 0;
     right: 0;
-    width: 90%;
+    width: 95%;
     height: 90%;
   }
   .image-wrapper {
-    height: 90%;
+    height: 80%;
     max-height: 560px;
     width: 50%;
     max-width: 500px;
@@ -262,6 +274,13 @@ section.about-me .content p {
   }
 }
 @media (min-width: 1024px) {
+  section.about-me::after {
+    top: -10%;
+    width: 90%;
+  }
+  .image-wrapper {
+    height: 90%;
+  }
 }
 
 /* Works */
@@ -337,14 +356,15 @@ section.works .work-item .type {
     margin: 0 0 400px;
   }
   section.works .work-item {
-    width: 400px;
+    max-width: 400px;
+    /* width:400px; */
   }
 
   section.works .work-items {
     padding: 0 20px;
-    gap: 100px;
-    row-gap: 300px;
-    grid-auto-rows: 500px;
+    gap: 50px;
+    row-gap: 100px;
+    grid-auto-rows: 400px;
     grid-template-columns: repeat(2, 1fr);
   }
   section.works .work-item:nth-child(2n) {
@@ -353,6 +373,11 @@ section.works .work-item .type {
   }
 }
 @media (min-width: 1024px) {
+  section.works .work-items {
+    gap: 100px;
+    row-gap: 300px;
+    grid-auto-rows: 500px;
+  }
 }
 
 /* Contact Me */
