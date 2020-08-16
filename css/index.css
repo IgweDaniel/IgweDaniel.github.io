@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --navHeight: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+}
+/* Utility classes */
+.v-center {
+  display: flex;
+  align-items: center;
+}
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.no-mobile {
+  display: none;
+}
+.cta {
+  background: linear-gradient(to bottom left, #f47a65, #ff4f64);
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 400;
+  transition: all 0.5s;
+  letter-spacing: 2px;
+  color: #fff;
+  box-shadow: none;
+  text-transform: uppercase;
+  outline: 0 !important;
+  background: #62abf8;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* NAV styles */
+.container {
+  width: 80%;
+  margin: auto;
+}
+nav {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  height: var(--navHeight);
+  width: 100%;
+  z-index: 20;
+}
+
+nav a.brand {
+  height: 35px;
+  border: 1px solid #333;
+  padding: 1px 15px;
+  letter-spacing: 2px;
+  box-shadow: 4px 4px #333;
+}
+
+nav a.brand span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  nav ul.links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  nav ul.links li {
+    flex: 1;
+    padding: 0 10px;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-size: 14.5px;
+    font-weight: 500;
+  }
+}
+/* main */
+main {
+  margin-top: var(--navHeight);
+}
+
+/* Greeting Section */
+section.greeting {
+  height: 400px;
+}
+section.greeting .greeting-inner {
+  display: flex;
+  align-items: center;
+}
+section.greeting .content {
+  width: 80%;
+}
+section.greeting .hello {
+  display: flex;
+  align-items: center;
+}
+section.greeting .hello span {
+  font-size: 30px;
+}
+
+section.greeting .hello img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+section.greeting .name {
+  font-size: 30px;
+  font-weight: 700;
+}
+p.what-i-do {
+  font-size: 20px;
+  color: #333;
+}
+
+section.greeting .social-links {
+  width: 20%;
+}
+section.greeting .social-links .add-button {
+  background-color: var(--blue);
+  height: 60px;
+  width: 60px;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  section.greeting {
+    height: 60vh;
+    max-height: 800px;
+  }
+  section.greeting .name {
+    font-size: 70px;
+  }
+  section.greeting .social-links .add-button {
+    height: 90px;
+    width: 90px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+}
+
+/* about-me */
+section.about-me {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.about-me::after {
+  content: "";
+  position: absolute;
+  background: #62abf8;
+  border-radius: 0 70px 70px 0;
+  z-index: -1;
+
+  left: 0;
+  right: 0;
+
+  width: 95%;
+  height: 100%;
+  opacity: 0.1;
+  top: -10%;
+}
+section.about-me .content {
+  width: 80%;
+  max-width: 400px;
+  margin: 50px 10%;
+}
+
+section.about-me .content h2 {
+  font-size: 32px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+section.about-me .content p {
+  color: #333;
+  font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  opacity: 0.6;
+
+  font-size: 22px;
+  margin-top: 20px !important;
+  margin-bottom: 30px !important;
+}
+
+.image-wrapper {
+  height: 300px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  section.about-me::after {
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 90%;
+  }
+  .image-wrapper {
+    height: 90%;
+    max-height: 560px;
+    width: 50%;
+    max-width: 500px;
+  }
+  section.about-me .content {
+    width: 50%;
+    margin: 0 10%;
+  }
+  section.about-me {
+    align-items: center;
+    flex-direction: row;
+  }
+  section.about-me .content p {
+    font-size: 22px;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+}
+@media (min-width: 1024px) {
+}
+
+/* Works */
+
+section.works {
+  padding: 48px 0;
+  margin: 0 0 100px;
+}
+section.works .title {
+  padding-bottom: 15px;
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #878d8d;
+  font-weight: 600;
+}
+section.works .sub-title {
+  font-weight: 500;
+  padding-bottom: 0px;
+  margin-bottom: 80px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: #000;
+  font-size: 36px;
+}
+section.works .work-items {
+  display: grid;
+  padding: 0 0px;
+  grid-template-columns: repeat(1, 1fr);
+  /* gap: 100px; */
+  row-gap: 150px;
+  grid-auto-rows: 500px;
+}
+section.works .work-item {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+section.works .work-item:nth-child(2n) {
+  /* justify-self: end; */
+  top: 0;
+}
+section.works .work-item .preview {
+  height: 100%;
+  width: 100%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+}
+section.works .work-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section.works .work-item .name {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin: 0px 0px 5px;
+  font-weight: 500;
+}
+section.works .work-item .type {
+  color: rgb(51, 51, 51);
+  font-weight: 500;
+
+  opacity: 0.6;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  section.works {
+    padding: 48px 0;
+    margin: 0 0 400px;
+  }
+  section.works .work-item {
+    width: 400px;
+  }
+
+  section.works .work-items {
+    padding: 0 20px;
+    gap: 100px;
+    row-gap: 300px;
+    grid-auto-rows: 500px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section.works .work-item:nth-child(2n) {
+    justify-self: end;
+    top: 150px;
+  }
+}
+@media (min-width: 1024px) {
+}
+
+/* Contact Me */
+section.contact {
+}
+section.contact .head .sub-title {
+  padding-bottom: 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: rgb(135, 141, 141);
+  font-weight: 600;
+}
+section.contact .head .title {
+  margin-bottom: 10px;
+  font-size: 36px;
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  padding-bottom: 0px;
+  text-transform: capitalize;
+}
+section.contact .content {
+  display: flex;
+  flex-direction: column;
+}
+section.contact .contact-details {
+  flex: 1;
+}
+section.contact .contact-details .detail {
+  margin: 24px 0;
+}
+section.contact .contact-details .detail .name {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+section.contact .contact-details .detail .value {
+  color: rgb(0, 0, 0);
+  opacity: 0.5;
+  text-decoration: underline;
+}
+section.contact .contact-form {
+  flex: 1;
+  margin: 20px 0;
+}
+section.contact .contact-form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 5px 100px 0px;
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+}
+section.contact .contact-form input[type="text"],
+textarea,
+input[type="submit"] {
+  display: block;
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+section.contact .contact-form input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 30px;
+  border-bottom: 1px solid rgb(206, 212, 218);
+  font: 400 15px;
+  font-family: "Open Sans", sans-serif;
+}
+
+section.contact .contact-form input[type="text"]::placeholder,
+textarea {
+  font-family: "Open Sans", sans-serif;
+  font: 400 15px;
+  text-transform: capitalize;
+}
+
+section.contact .contact-form input[type="submit"] {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 40px 0px;
+  background: linear-gradient(to bottom left, #f47a65, #ff4f64);
+  padding: 15px 25px;
+}
+
+@media (min-width: 768px) {
+  section.contact .contact-form {
+    margin: 0;
+  }
+  section.contact .content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1024px) {
+}
